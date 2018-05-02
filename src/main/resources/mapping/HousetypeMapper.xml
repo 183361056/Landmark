@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ga.landmark.mapper.HousetypeMapper">
+  <resultMap id="BaseResultMap" type="com.ga.landmark.model.Housetype">
+    <result column="RID" jdbcType="NVARCHAR" property="rid" />
+    <result column="TYPENAME" jdbcType="NVARCHAR" property="typename" />
+  </resultMap>
+  <insert id="insert" parameterType="com.ga.landmark.model.Housetype">
+    insert into T_HOUSETYPE (RID, TYPENAME)
+    values (#{rid,jdbcType=NVARCHAR}, #{typename,jdbcType=NVARCHAR})
+  </insert>
+</mapper>
